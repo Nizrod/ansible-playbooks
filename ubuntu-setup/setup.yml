@@ -71,13 +71,18 @@
       become: no
 
     - name: Install Starship prompt
-      get_url:
-        url: https://starship.rs/install.sh
-        dest: /tmp/install_starship.sh
-        mode: '0755'
-      become: no
-      environment:
-        HOME: "/home/{{ username }}"
+      block:
+        - name: Download Starship script
+          get_url:
+            url: https://starship.rs/install.sh
+            dest: /tmp/install_starship.sh
+            mode: '0755'
+          become: no
+          environment:
+            HOME: "/home/{{ username }}"
+        - name: Run Starship script
+          shell: sh /tmp/install_starship.sh --yes
+          become: no
 
     - name: Install Powerline fonts
       block:
