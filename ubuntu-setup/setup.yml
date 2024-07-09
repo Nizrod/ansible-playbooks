@@ -75,7 +75,7 @@
 
     - name: Install Powerline fonts
       block:
-        - name: Create Powerfile fonts temporary directory
+        - name: Create Powerline fonts temporary directory
           file:
             path: /tmp/powerline-fonts
             owner: "{{ username }}"
