@@ -7,10 +7,12 @@ source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.z
 source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Enable you-should-use
 source $HOME/.oh-my-zsh/custom/plugins/you-should-use/you-should-use.plugin.zsh
+# Enable zsh-bat
+source $HOME/.oh-my-zsh/custom/plugins/zsh-bat/zsh-bat.plugin.zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-bat you-should-use)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -64,6 +64,12 @@
         dest: /home/{{ username }}/.oh-my-zsh/custom/plugins/you-should-use
       become: no
 
+    - name: Install zsh-bat plugin
+      git:
+        repo: https://github.com/fdellwing/zsh-bat.git
+        dest: /home/{{ username }}/.oh-my-zsh/custom/plugins/zsh-bat
+      become: no
+
     - name: Install Starship prompt
       get_url:
         url: https://starship.rs/install.sh
