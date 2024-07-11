@@ -24,6 +24,7 @@
           - unzip
           - fontconfig
           - exa
+          - xsel
         state: present
 
     - name: Install Docker
