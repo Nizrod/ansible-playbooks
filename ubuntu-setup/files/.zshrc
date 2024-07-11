@@ -48,5 +48,12 @@ alias gh='git hist'
 # -------------------------------------------------------------------
 
 alias ls="exa"
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
+# -------------------------------------------------------------------
+
+# Set ssh agent
+eval $(ssh-agent -s)
 
 eval "$(starship init zsh)"
